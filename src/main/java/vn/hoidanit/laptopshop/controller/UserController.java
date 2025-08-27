@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.springframework.ui.Model;
 import vn.hoidanit.laptopshop.service.UserService;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,9 +21,10 @@ public class UserController {
     }
 
     @RequestMapping("/")
-
-    public String getHomePage() {
+    public String getHomePage(Model model) {
         String test = this.userService.handleHello();
+        model.addAttribute("eric", test);
+        model.addAttribute("hoidanit", "from controller with love");
         return "hello";
     }
 }
