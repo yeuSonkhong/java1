@@ -22,7 +22,7 @@
             <h2>
                 ${hoidanit}
             </h2>
-            <button>Submit</button>
+            <button class="btn btn-warning"> Submit</button>
             </button>
         </body>
 
